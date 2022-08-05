@@ -23,19 +23,19 @@ def test(s: Session) -> None:
 
 @session(venv_backend="none")
 def fmt(s: Session) -> None:
-    s.run("isort", ".")
-    s.run("black", ".")
+    s.run("isort", "src")
+    s.run("black", "src")
 
 
 @session(venv_backend="none")
 def fmt_check(s: Session) -> None:
-    s.run("isort", "--check", ".")
-    s.run("black", "--check", ".")
+    s.run("isort", "--check", "src")
+    s.run("black", "--check", "src")
 
 
 @session(venv_backend="none")
 def lint(s: Session) -> None:
-    s.run("pflake8")
+    s.run("pflake8", "src")
 
 
 @session(venv_backend="none")
