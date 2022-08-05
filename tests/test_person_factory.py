@@ -1,5 +1,6 @@
 from data_hack_faker.dataclasses import Person
 from data_hack_faker.factories import PersonFactory
+import pytest
 from pytest_check import check
 
 
@@ -17,8 +18,15 @@ def test_person_factory():
     check_person(person)
 
 
-def test_person_factory_benchmark(benchmark):
-    persons = benchmark(PersonFactory.create_batch, size=10_000)
+@pytest.mark.parametrize(
+    "batch_size",
+    [
+        1,
+        1_000,
+        # 1_000_000
+    ],
+)
+def test_person_factory_benchmark(benchmark, batch_size):
+    persons = benchmark(PersonFactory.create_batch, size=batch_size)
     for person in persons:
-        with check:
-            check_person(person)
+        check_person(person)
