@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+import datetime
 import random
 
 from faker import Faker
@@ -12,3 +13,4 @@ class Person:
     last_name: str = field(default_factory=fake_ru.last_name)
     age: int = field(default=random.randint(0, 100))
     job: str = field(default_factory=fake_ru.job)
+    birth_date: datetime.date = field(default_factory=fake_ru.date_of_birth)
