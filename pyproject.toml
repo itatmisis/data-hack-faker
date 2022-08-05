@@ -24,6 +24,7 @@ nox-poetry = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-check = "*"
+pytest-benchmark = "*"
 
 # Type Checking.
 mypy = "*"
