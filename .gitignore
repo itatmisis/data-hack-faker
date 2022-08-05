@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm local folder
+.idea/
+
+# poetry.lock (this is controversial but let it be here)
+poetry.lock
