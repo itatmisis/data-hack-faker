@@ -506,6 +506,20 @@ tomli = ">=1.0.0"
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
+name = "pytest-check"
+version = "1.0.5"
+description = "A pytest plugin that allows multiple failures per test."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pytest = ">=6.0.0"
+
+[package.extras]
+test = ["tox"]
+
+[[package]]
 name = "pytest-cov"
 version = "3.0.0"
 description = "Pytest plugin for measuring coverage."
@@ -620,7 +634,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "22ce4f344e8bf216ad6cfe09b8e3a5c4ceba764cb605773d3b00fb5fef157192"
+content-hash = "847b8a338ecd9c3193459b8567ef1e52cf022499ce9b57f5efc1f46cee31ef2a"
 
 [metadata.files]
 argcomplete = [
@@ -865,6 +879,10 @@ pyspark = [
 pytest = [
     {file = "pytest-7.1.2-py3-none-any.whl", hash = "sha256:13d0e3ccfc2b6e26be000cb6568c832ba67ba32e719443bfe725814d3c42433c"},
     {file = "pytest-7.1.2.tar.gz", hash = "sha256:a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"},
+]
+pytest-check = [
+    {file = "pytest_check-1.0.5-py3-none-any.whl", hash = "sha256:56a8e5a267e8d7ff5be869079df7d4095dfd30082738845cc892a74573ad4e33"},
+    {file = "pytest_check-1.0.5.tar.gz", hash = "sha256:b9c8db6b1dee3c1e66162bd079b81c083296cb7131e9841519c28a40818a4875"},
 ]
 pytest-cov = [
     {file = "pytest-cov-3.0.0.tar.gz", hash = "sha256:e7f0f5b1617d2210a2cabc266dfe2f4c75a8d32fb89eafb7ad9d06f6d076d470"},
