@@ -9,8 +9,14 @@ fake_ru = Faker(locale="ru_RU")
 
 @dataclass
 class Person:
-    first_name: str = field(default_factory=fake_ru.first_name)
-    last_name: str = field(default_factory=fake_ru.last_name)
-    age: int = field(default=random.randint(0, 100))
-    job: str = field(default_factory=fake_ru.job)
-    birth_date: datetime.date = field(default_factory=fake_ru.date_of_birth)
+    first_name: str
+    last_name: str
+    age: int
+    job: str
+    birth_date: datetime.date
+    def __init__(self):
+        self.first_name = field(default_factory=fake_ru.first_name)
+        self.last_name = field(default_factory=fake_ru.last_name)
+        self.age = field(default=random.randint(0, 100))
+        self.job = field(default_factory=fake_ru.job)
+        self.birth_date = field(default_factory=fake_ru.date_of_birth)
