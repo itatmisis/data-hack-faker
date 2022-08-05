@@ -7,6 +7,9 @@ authors = ["Артём Соседка <m1801239@edu.misis.ru>",
     "Максим Федотов <mvfedotov_1@edu.hse.ru>"]
 readme = "README.md"
 repository = "https://github.com/itatmisis/data-hack-faker"
+packages = [
+    { include = "data_hack_faker", from= "src" }
+]
 
 
 [tool.poetry.dependencies]
