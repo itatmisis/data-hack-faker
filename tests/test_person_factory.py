@@ -1,10 +1,10 @@
-from data_hack_faker.dataclasses import Person
-from data_hack_faker.factories import PersonFactory
+from src.data_hack_faker.dataclasses import Customer
+from src.data_hack_faker.factories import PersonFactory
 import pytest
 from pytest_check import check
 
 
-def check_person(person: Person):
+def check_person(person: Customer):
     with check:
         assert isinstance(person.first_name, str)
         assert isinstance(person.last_name, str)

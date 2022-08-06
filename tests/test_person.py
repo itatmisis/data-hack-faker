@@ -1,5 +1,5 @@
-from data_hack_faker.dataclasses.person import Person
+from src.data_hack_faker.dataclasses.customer import Customer
 
 
 def test_person_generation():
-    Person("Louis", "Silvester", 18, "89185553535")
+    Customer("Louis", "Silvester", 18, "89185553535")
