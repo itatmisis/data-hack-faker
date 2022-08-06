@@ -12,5 +12,12 @@ def test_generate_table():
             instances, file_format="parquet", save_path=Path("../.tmp/")
         )
         spark_inference.generate_table_from_list(
+            instances, file_format="csv", save_path=Path("../.tmp/")
+        )
+        spark_inference.generate_table_from_list(
             instances, file_format="orc", save_path=Path("../.tmp/")
         )
+        df_parquet = spark_inference.load_table_from_filepath(Path("../.tmp/Customer.parquet"))
+        # df_orc = spark_inference.load_table_from_filepath(Path("../.tmp/Customer.orc"))
+        print(df_parquet.head(5))
+        # print(df_orc.head(5))
