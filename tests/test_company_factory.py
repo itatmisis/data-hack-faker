@@ -9,6 +9,7 @@ def check_company(company: Company):
         assert isinstance(company.name, str)
         assert isinstance(company.address, str)
         assert isinstance(company.location, str)
+        assert len(company.phone_number) == 11
         assert company.phone_number[:4] == "8918"
 
 

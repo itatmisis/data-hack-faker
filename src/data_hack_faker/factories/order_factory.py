@@ -1,13 +1,13 @@
-import factory
+from factory import Faker
 
+from . import BaseFactory
 from ..dataclasses import Order
 
 
-class OrderFactory(factory.Factory):
+class OrderFactory(BaseFactory):
     class Meta:
         model = Order
 
-    id = factory.sequence(lambda n: n)
-    customer_id = factory.Faker("pyint", min_value=0, max_value=9999)
-    product_id = factory.Faker("pyint", min_value=0, max_value=9999)
-    created_at = factory.Faker("date_time_this_month")
+    customer_id = Faker("pyint", min_value=0, max_value=9999)
+    product_id = Faker("pyint", min_value=0, max_value=9999)
+    created_at = Faker("date_time_this_month")
