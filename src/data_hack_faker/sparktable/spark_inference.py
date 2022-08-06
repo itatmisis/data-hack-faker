@@ -4,6 +4,7 @@ from dataclasses import astuple, fields
 import os
 from pathlib import Path
 
+import pandas as pd
 from pyspark.sql import SparkSession
 
 from ..dataclasses import Company, Customer, Employee, Order, Product
@@ -23,17 +24,20 @@ def generate_table_from_list(
     data_list: list[Company | Customer | Employee | Order | Product],
     file_format: str,
     save_path: os.PathLike = Path(".tmp/"),  # noqa: B008
-):
+) -> pd.DataFrame:
     data_class_name = data_list[0].__class__.__name__
     columns = [field.name for field in fields(data_list[0])]
     prepared_data_list = prepare_data_list(data_list)
     df = spark_builder.createDataFrame(prepared_data_list).toDF(*columns)
     file_path = (Path(save_path) / Path(f"{data_class_name}.{file_format}")).__str__()
     (df.write.mode("overwrite").format(file_format).save(file_path))
+    pd_df = df.toPandas()
+    return pd_df
 
 
 def load_table_from_filepath(
     file_path: os.PathLike,
-):
+) -> pd.DataFrame:
     df = spark_builder.read.load(file_path.__str__())
+    df = df.toPandas()
     return df
