@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 
+from .base_dataclass import BaseDataclass
+
 
 @dataclass(frozen=True)
-class Employee:
+class Employee(BaseDataclass):
     first_name: str
     last_name: str
     age: int

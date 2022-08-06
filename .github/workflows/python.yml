@@ -22,14 +22,6 @@ jobs:
         run: poetry install
       - name: Test with Nox
         run: poetry run nox -s test-${{ matrix.python-version }}
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-      - name: Run pre-commit hooks
-        uses: pre-commit/action@v3.0.0
   quality:
     runs-on: ubuntu-latest
     strategy:
@@ -42,7 +34,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "3.10"
           # cache: poetry
       - name: Install all dependencies, including Nox
         run: poetry install
