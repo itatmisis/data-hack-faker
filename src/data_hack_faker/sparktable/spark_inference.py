@@ -25,11 +25,11 @@ def generate_table_from_list(
     file_format: str,
     save_path: os.PathLike = Path(".tmp/"),  # noqa: B008
 ) -> pd.DataFrame:
-    data_class_name = data_list[0].__class__.__name__
+    data_class_name: str = data_list[0].__class__.__name__
     columns = [field.name for field in fields(data_list[0])]
     prepared_data_list = prepare_data_list(data_list)
     df = spark_builder.createDataFrame(prepared_data_list).toDF(*columns)
-    file_path = (Path(save_path) / Path(f"{data_class_name}.{file_format}")).__str__()
+    file_path = (Path(save_path) / Path(f"{data_class_name.lower()}_{file_format}")).__str__()
     (df.write.mode("overwrite").format(file_format).save(file_path))
     pd_df = df.toPandas()
     return pd_df
