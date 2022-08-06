@@ -1,4 +1,4 @@
-from src.data_hack_faker.dataclasses.customer import Customer
+from data_hack_faker.dataclasses.customer import Customer
 
 
 def test_person_generation():

@@ -1,6 +1,6 @@
+from data_hack_faker.providers import JobProvider
 import faker
 from pytest_check import check
-from src.data_hack_faker.providers import JobProvider
 
 
 def test_job_provider():
