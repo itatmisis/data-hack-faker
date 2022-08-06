@@ -6,7 +6,7 @@ nox.options.reuse_existing_virtualenvs = True
 nox.options.sessions = ["fmt_check", "lint", "type_check", "test"]
 
 
-@session(python=["3.7", "3.8", "3.9", "3.10"])
+@session(python=["3.9", "3.10"])
 def test(s: Session) -> None:
     s.install(".", "pytest", "pytest-cov", "pytest-check", "pytest-benchmark")
     s.run(
