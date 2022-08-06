@@ -1,6 +1,7 @@
+import factory
+
 from ..dataclasses import Customer
 from ..providers import JobProvider
-import factory
 
 factory.Faker.add_provider(JobProvider)
 

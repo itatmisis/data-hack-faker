@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
+
 from .base_dataclass import BaseDataclass
 
 

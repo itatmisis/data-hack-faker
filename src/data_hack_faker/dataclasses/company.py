@@ -1,5 +1,7 @@
 from dataclasses import dataclass
+
 from .base_dataclass import BaseDataclass
+
 
 @dataclass(frozen=True)
 class Company(BaseDataclass):

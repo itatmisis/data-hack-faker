@@ -1,7 +1,7 @@
-from src.data_hack_faker.dataclasses import Customer
-from src.data_hack_faker.factories import PersonFactory
 import pytest
 from pytest_check import check
+from src.data_hack_faker.dataclasses import Customer
+from src.data_hack_faker.factories import PersonFactory
 
 
 def check_person(person: Customer):

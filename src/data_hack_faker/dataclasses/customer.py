@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 from .base_dataclass import BaseDataclass
 
 
