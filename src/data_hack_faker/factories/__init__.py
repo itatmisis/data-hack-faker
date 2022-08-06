@@ -1,5 +1,6 @@
 from typing import Union
 
+from .base_factory import BaseFactory
 from .company_factory import CompanyFactory
 from .customer_factory import CustomerFactory
 from .employee_factory import EmployeeFactory
@@ -12,6 +13,7 @@ __all__ = [
     "EmployeeFactory",
     "OrderFactory",
     "ProductFactory",
+    "BaseFactory",
 ]
 types = Union[CompanyFactory, CustomerFactory, EmployeeFactory, OrderFactory, ProductFactory]
 available_factories = [

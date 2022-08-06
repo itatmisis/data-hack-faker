@@ -1,9 +1,10 @@
-import factory
+from factory import Faker
 
+from . import BaseFactory
 from ..dataclasses import Product
 
 
-class ProductFactory(factory.Factory):
+class ProductFactory(BaseFactory):
     class Meta:
         model = Product
 
