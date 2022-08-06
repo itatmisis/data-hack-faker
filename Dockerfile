@@ -11,4 +11,4 @@ ENV PATH="${PATH}:/app"
 RUN echo "#!/bin/bash\n python3 cli.py $@" > fake
 RUN chmod +x fake
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT ["/bin/bash"]
