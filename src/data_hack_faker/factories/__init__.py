@@ -1,3 +1,4 @@
+from .base_factory import BaseFactory
 from .company_factory import CompanyFactory
 from .customer_factory import CustomerFactory
 from .employee_factory import EmployeeFactory
@@ -10,4 +11,5 @@ __all__ = [
     "EmployeeFactory",
     "OrderFactory",
     "ProductFactory",
+    "BaseFactory",
 ]
