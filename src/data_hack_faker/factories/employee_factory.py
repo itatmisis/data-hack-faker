@@ -1,16 +1,19 @@
 import factory
 
-from ..dataclasses import Customer
+from . import CompanyFactory
+from ..dataclasses import Employee
 from ..providers import JobProvider
 
 factory.Faker.add_provider(JobProvider)
 
 
-class PersonFactory(factory.Factory):
+class EmployeeFactory(factory.Factory):
     class Meta:
-        model = Customer
+        model = Employee
 
+    id = factory.sequence(lambda n: n)
     first_name = factory.Faker("first_name")
     last_name = factory.Faker("last_name")
     age = factory.Faker("pyint", min_value=18, max_value=100)
-    phone_number = factory.Faker("bothify", text="8918#######")
+    job = factory.Faker("JobProvider")
+    company_id = factory.SubFactory(CompanyFactory)

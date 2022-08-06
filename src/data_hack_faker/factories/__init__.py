@@ -1,5 +1,4 @@
-from .person_factory import PersonFactory
+from .company_factory import CompanyFactory
+from .customer_factory import CustomerFactory
 
-__all__ = [
-    "PersonFactory",
-]
+__all__ = ["CustomerFactory", "CompanyFactory"]
