@@ -1,0 +1,23 @@
+{
+  "rows": 10000,
+  "first_name": {
+    "min_length": 5,
+    "max_length": 15
+  },
+  "last_name": {
+    "choices": [
+      "Иванов",
+      "Петров"
+    ],
+    "weights": [
+      0.4
+    ]
+  },
+  "phone_number": {
+    "mask": "8918#######"
+  },
+  "age": {
+    "min_value": 18,
+    "max_value": 35
+  }
+}
