@@ -1,4 +1,4 @@
-from factory import Faker
+import factory
 
 from . import BaseFactory
 from ..dataclasses import Product
