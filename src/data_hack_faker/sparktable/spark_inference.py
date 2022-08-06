@@ -19,7 +19,7 @@ def prepare_data_list(
 def generate_table_from_list(
     data_list: list[Company | Customer | Employee | Order | Product],
     file_format: str,
-    save_path: os.PathLike = Path(".tmp/"),
+    save_path: os.PathLike = Path(".tmp/"),  # noqa: B008
 ):
     spark_builder = SparkSession.builder.appName(APP_NAME).getOrCreate()
     data_class_name = data_list[0].__class__.__name__
