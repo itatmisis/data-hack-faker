@@ -490,17 +490,6 @@ pandas_on_spark = ["numpy (>=1.15)", "pandas (>=1.0.5)", "pyarrow (>=1.0.0)"]
 sql = ["pandas (>=1.0.5)", "pyarrow (>=1.0.0)"]
 
 [[package]]
-name = "pyspark-test"
-version = "0.2.0"
-description = "Check that left and right spark DataFrame are equal."
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-pyspark = ">=2.1.2"
-
-[[package]]
 name = "pytest"
 version = "7.1.2"
 description = "pytest: simple powerful testing with Python"
@@ -671,7 +660,7 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "50cfcdec10e73692ce201454ee85ccde374e73c090e2f8c8b1545e887ffc83c2"
+content-hash = "5abd0fcd57c9fc85c9013288370e4b35e82398caeeb4ce180ef14482f44ce417"
 
 [metadata.files]
 argcomplete = [
@@ -958,10 +947,6 @@ pyproject-flake8 = [
 ]
 pyspark = [
     {file = "pyspark-3.3.0.tar.gz", hash = "sha256:7ebe8e9505647b4d124d5a82fca60dfd3891021cf8ad6c5ec88777eeece92cf7"},
-]
-pyspark-test = [
-    {file = "pyspark_test-0.2.0-py3-none-any.whl", hash = "sha256:dd4fb03c4f438f718a870a9268a459f2f8924829c767302f5515202707c97709"},
-    {file = "pyspark_test-0.2.0.tar.gz", hash = "sha256:0d9d8d3a352a9b1c30761b0553a5771cb9dbb9a278955b3e7b0aed0ae13892d8"},
 ]
 pytest = [
     {file = "pytest-7.1.2-py3-none-any.whl", hash = "sha256:13d0e3ccfc2b6e26be000cb6568c832ba67ba32e719443bfe725814d3c42433c"},
