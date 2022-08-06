@@ -8,7 +8,7 @@ authors = ["Артём Соседка <m1801239@edu.misis.ru>",
 readme = "README.md"
 repository = "https://github.com/itatmisis/data-hack-faker"
 packages = [
-    { include = "data_hack_faker", from= "src" }
+    { include = "data_hack_faker", from = "src" }
 ]
 
 
@@ -16,6 +16,7 @@ packages = [
 python = "^3.7"
 pyspark = "^3.3.0"
 factory-boy = "^3.2.1"
+ujson = "^5.4.0"
 
 [tool.poetry.dev-dependencies]
 nox-poetry = "*"
@@ -54,6 +55,7 @@ pre-commit = "*"
 
 #[tool.poetry.scripts]
 #fact = "data_hack_faker.cli:app"
+types-ujson = "^5.4.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
