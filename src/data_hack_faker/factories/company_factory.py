@@ -10,5 +10,5 @@ class CompanyFactory(factory.Factory):
     id = factory.sequence(lambda n: n)
     name = factory.Faker("company")
     location = factory.Faker("administrative_unit")
-    address = factory.Faker("address")
+    address = factory.Faker("city")
     phone_number = factory.Faker("bothify", text="8918#######")
