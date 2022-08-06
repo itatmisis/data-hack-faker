@@ -13,10 +13,11 @@ packages = [
 
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 pyspark = "^3.3.0"
 factory-boy = "^3.2.1"
 typer = "^0.6.1"
+pandas = "^1.4.3"
 
 [tool.poetry.dev-dependencies]
 nox-poetry = "*"
@@ -101,7 +102,8 @@ filterwarnings = [
     "error",
     # Add additional warning supressions as needed here. For example, if a third-party library
     # is throwing a deprecation warning that needs to be fixed upstream:
-    # "ignore::DeprecationWarning:typer",
+    "ignore::DeprecationWarning",
+    "ignore::pytest.PytestUnraisableExceptionWarning"
 ]
 
 [tool.coverage.run]
