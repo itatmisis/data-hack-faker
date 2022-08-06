@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import astuple, fields
 import os
 from pathlib import Path
