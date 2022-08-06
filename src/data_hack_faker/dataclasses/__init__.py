@@ -1,5 +1,9 @@
-from .person import Person
+from .customer import Customer
+from .order import Order
+from .product import Product
+from .company import Company
+from .employee import Employee
 
 __all__ = [
-    "Person",
+    "Customer", "Order", "Product", "Company",
 ]

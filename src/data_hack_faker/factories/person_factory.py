@@ -1,5 +1,5 @@
-from data_hack_faker.dataclasses import Person
-from data_hack_faker.providers import JobProvider
+from ..dataclasses import Customer
+from ..providers import JobProvider
 import factory
 
 factory.Faker.add_provider(JobProvider)
@@ -7,7 +7,7 @@ factory.Faker.add_provider(JobProvider)
 
 class PersonFactory(factory.Factory):
     class Meta:
-        model = Person
+        model = Customer
 
     first_name = factory.Faker("first_name")
     last_name = factory.Faker("last_name")
