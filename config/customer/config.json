@@ -17,7 +17,7 @@
     "mask": "8918#######"
   },
   "age": {
-    "min_value": 18,
-    "max_value": 35
+    "min": 18,
+    "max": 35
   }
 }

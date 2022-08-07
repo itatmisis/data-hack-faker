@@ -3,6 +3,8 @@ from factory import Faker
 from . import BaseFactory
 from ..dataclasses import Order
 
+Faker.override_default_locale('ru_RU')
+
 
 class OrderFactory(BaseFactory):
     class Meta:
