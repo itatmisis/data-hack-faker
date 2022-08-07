@@ -31,7 +31,6 @@ pytest-benchmark = "*"
 
 # Type Checking.
 mypy = "*"
-ujson-types = "*"
 
 # Linting.
 flake8 = "*"
