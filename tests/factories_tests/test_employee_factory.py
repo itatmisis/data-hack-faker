@@ -8,8 +8,8 @@ def check_employee(employee: Employee):
     with check:
         assert isinstance(employee.first_name, str)
         assert isinstance(employee.last_name, str)
-        assert 18 <= employee.age <= 100
         assert isinstance(employee.job, str)
+        assert isinstance(employee.company_id, int)
         assert employee.company_id > 0
 
 

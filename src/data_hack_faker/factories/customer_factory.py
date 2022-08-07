@@ -1,17 +1,28 @@
 from config import customer_settings as settings
-from factory import Faker
+import factory
 
 from . import BaseFactory
 from ..dataclasses import Customer
 
-Faker.override_default_locale(settings["locale"] or "ru_RU")
+locale = settings["locale"] or "en_US"
 
 
 class CustomerFactory(BaseFactory):
     class Meta:
         model = Customer
 
-    first_name = Faker("first_name")
-    last_name = Faker("last_name")
-    age = Faker("pyint", min_value=settings["age"]["min"], max_value=settings["age"]["max"])
-    phone_number = Faker("bothify", text=settings["phone"]["mask"])
+    # Default settings
+    first_name = factory.Faker("first_name", locale=locale)
+    last_name = factory.Faker("last_name", locale=locale)
+    age = factory.Faker("pyint", min_value=18, max_value=35)
+    phone_number = factory.Faker("bothify", text="8918#######")
+
+    # Config settings
+    if "first_name" in settings:
+        first_name = BaseFactory.configure_faker("first_name", settings, locale)
+    if "last_name" in settings:
+        last_name = BaseFactory.configure_faker("last_name", settings, locale)
+    if "age" in settings:
+        age = BaseFactory.configure_faker("age", settings, locale)
+    if "phone_number" in settings:
+        phone_number = BaseFactory.configure_faker("phone_number", settings, locale)

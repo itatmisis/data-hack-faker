@@ -8,7 +8,15 @@ nox.options.sessions = ["fmt_check", "lint", "type_check", "test"]
 
 @session(python=["3.9", "3.10"])
 def test(s: Session) -> None:
-    s.install(".", "pytest", "pytest-cov", "pytest-check", "pytest-benchmark", "pyspark-test")
+    s.install(
+        ".",
+        "pytest",
+        "pytest-cov",
+        "pytest-check",
+        "pytest-benchmark",
+        "pyspark-test",
+        "types-ujson",
+    )
     s.run(
         "python",
         "-m",
@@ -40,4 +48,7 @@ def lint(s: Session) -> None:
 
 @session(venv_backend="none")
 def type_check(s: Session) -> None:
+    s.install(
+        "types-ujson",
+    )
     s.run("mypy", "src", "tests", "noxfile.py")
