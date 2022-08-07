@@ -1,20 +1,20 @@
 {
+  "locale": "ru_RU",
   "rows": 10000,
-  "first_name": {
-    "min_length": 5,
-    "max_length": 15
-  },
-
   "name": {
-    "choices" : [
-      "ООО Альфа-Банк",
-      "ООО ПаркФайндер",
-      "ОАО Моя Оборона"
-    ],
-    "weights": [0.33,0.33,0.33]
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "ООО Альфа-Банк": 0.33,
+        "ООО ПаркФайндер": 0.33,
+        "ОАО Моя Оборона": 0.34
+      }
+    }
   },
   "phone": {
-    "mask": "8918#######"
+    "provider": "bothify",
+    "kwargs": {
+      "text": "8918#######"
+    }
   }
-
 }

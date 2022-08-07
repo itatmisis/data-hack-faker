@@ -1,4 +1,5 @@
 {
+  "locale": "ru_RU",
   "rows": 10000,
   "first_name": {
     "min_length": 5,

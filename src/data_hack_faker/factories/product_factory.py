@@ -1,9 +1,10 @@
+from config import product_settings as settings
 from factory import Faker
 
 from . import BaseFactory
 from ..dataclasses import Product
 
-Faker.override_default_locale('ru_RU')
+Faker.override_default_locale(settings["locale"] or "ru_RU")
 
 
 class ProductFactory(BaseFactory):

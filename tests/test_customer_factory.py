@@ -1,17 +1,17 @@
+from config import customer_settings as settings
 from data_hack_faker.dataclasses import Customer
 from data_hack_faker.factories import CustomerFactory
 import pytest
 from pytest_check import check
-from config import customer_settings as settings
 
 
 def check_customer(customer: Customer):
     with check:
         assert isinstance(customer.first_name, str)
         assert isinstance(customer.last_name, str)
-        assert settings['age']['min'] <= customer.age <= settings['age']['max']
+        assert settings["age"]["min"] <= customer.age <= settings["age"]["max"]
         assert len(customer.phone_number) == 11
-        assert customer.phone_number[:4] == settings['phone']['mask'][:4]
+        assert customer.phone_number[:4] == settings["phone"]["mask"][:4]
 
 
 def test_customer_factory():

@@ -1,7 +1,8 @@
-import ujson, os
+import os
+
+import ujson
 
 path = os.path.dirname(os.path.realpath(__file__))
-
 
 with open(path + "/company/config.json") as f:
     company_settings = ujson.load(f)
