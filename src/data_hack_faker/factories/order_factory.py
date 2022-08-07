@@ -1,4 +1,5 @@
 from config import order_settings as settings
+import factory
 from factory import Faker
 
 from . import BaseFactory

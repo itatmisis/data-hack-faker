@@ -1,4 +1,3 @@
-
 from config import employee_settings as settings
 from factory import Faker
 
