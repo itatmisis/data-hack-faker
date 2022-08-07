@@ -1,4 +1,4 @@
-from ..data_hack_faker.config import employee_settings as settings
+from ..config import employee_settings as settings
 import factory
 
 from . import BaseFactory
