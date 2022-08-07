@@ -1,0 +1,20 @@
+{
+  "locale": "ru_RU",
+  "rows": 10000,
+  "name": {
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "ООО Альфа-Банк": 0.33,
+        "ООО ПаркФайндер": 0.33,
+        "ОАО Моя Оборона": 0.34
+      }
+    }
+  },
+  "phone": {
+    "provider": "bothify",
+    "kwargs": {
+      "text": "8918#######"
+    }
+  }
+}

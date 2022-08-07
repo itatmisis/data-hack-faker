@@ -1,0 +1,33 @@
+{
+  "locale": "ru_RU",
+  "rows": 10000,
+  "first_name": {
+    "min_length": 5,
+    "max_length": 15
+  },
+  "last_name": {
+    "choices": [
+      "Иванов",
+      "Петров"
+    ],
+    "weights": [
+      0.4
+    ]
+  },
+  "age": {
+    "min": 18,
+    "max": 35
+  },
+  "job": {
+    "choices": [
+      "Программист",
+      "Сантехник",
+      "Слесарь"
+    ],
+    "weights": [
+      0.15,
+      0.4,
+      0.45
+    ]
+  }
+}

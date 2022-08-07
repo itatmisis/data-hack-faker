@@ -1,0 +1,24 @@
+{
+  "locale": "ru_RU",
+  "rows": 10000,
+  "first_name": {
+    "min_length": 5,
+    "max_length": 15
+  },
+  "last_name": {
+    "choices": [
+      "Иванов",
+      "Петров"
+    ],
+    "weights": [
+      0.4
+    ]
+  },
+  "phone": {
+    "mask": "8918#######"
+  },
+  "age": {
+    "min": 18,
+    "max": 35
+  }
+}

@@ -1,7 +1,10 @@
-import factory
+from config import order_settings as settings
+from factory import Faker
 
 from . import BaseFactory
 from ..dataclasses import Order
+
+Faker.override_default_locale(settings["locale"] or "ru_RU")
 
 
 class OrderFactory(BaseFactory):
