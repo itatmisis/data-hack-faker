@@ -6,11 +6,11 @@ from pyspark_test import assert_pyspark_df_equal
 import pytest
 
 
-@pytest.mark.parametrize("batch_size", [10])
+@pytest.mark.parametrize("batch_size", [100])
 @pytest.mark.parametrize("file_format", ["parquet", "csv"])
 @pytest.mark.parametrize("factory", factories.available_factories)
 def test_generate_table(batch_size, file_format, factory):
-    save_path = Path(".tmp")
+    save_path = Path("../.tmp")
     instances = factory.create_batch(size=batch_size)
     class_name: str = factory._meta.model.__name__.lower()
     file_path = save_path / Path(f"{class_name}_{file_format}")

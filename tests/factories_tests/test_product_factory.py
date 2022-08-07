@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 
 from data_hack_faker.dataclasses import Product
 from data_hack_faker.factories import ProductFactory
@@ -10,7 +10,7 @@ def check_product(product: Product):
     with check:
         assert isinstance(product.name, str)
         assert isinstance(product.price, float)
-        assert isinstance(product.date_produced, date)
+        assert isinstance(product.date_produced, datetime)
         assert isinstance(product.company_id, int)
 
 

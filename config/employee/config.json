@@ -2,32 +2,21 @@
   "locale": "ru_RU",
   "rows": 10000,
   "first_name": {
-    "min_length": 5,
-    "max_length": 15
-  },
-  "last_name": {
-    "choices": [
-      "Иванов",
-      "Петров"
-    ],
-    "weights": [
-      0.4
-    ]
-  },
-  "age": {
-    "min": 18,
-    "max": 35
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Алексей": 0.5,
+        "Геннадий": 0.5
+      }
+    }
   },
   "job": {
-    "choices": [
-      "Программист",
-      "Сантехник",
-      "Слесарь"
-    ],
-    "weights": [
-      0.15,
-      0.4,
-      0.45
-    ]
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Программист": 0.2,
+        "Сантехник": 0.8
+      }
+    }
   }
 }

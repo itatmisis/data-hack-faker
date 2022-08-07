@@ -2,23 +2,18 @@
   "locale": "ru_RU",
   "rows": 10000,
   "first_name": {
-    "min_length": 5,
-    "max_length": 15
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Иван": 0.5,
+        "Андрей": 0.5
+      }
+    }
   },
-  "last_name": {
-    "choices": [
-      "Иванов",
-      "Петров"
-    ],
-    "weights": [
-      0.4
-    ]
-  },
-  "phone": {
-    "mask": "8918#######"
-  },
-  "age": {
-    "min": 18,
-    "max": 35
+  "phone_number": {
+    "provider": "bothify",
+    "kwargs": {
+      "text": "8918#######"
+    }
   }
 }

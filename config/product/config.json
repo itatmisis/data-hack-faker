@@ -2,19 +2,20 @@
   "locale": "ru_RU",
   "rows": 10000,
   "name": {
-    "choices": [
-      "Минеральная Вода \"Боржоми\" 0.5л",
-      "Чайник электрический",
-      "Велосипед"
-    ],
-    "weights": [
-      0.33,
-      0.33,
-      0.33
-    ]
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Зубная щетка": 0.5,
+        "Зубная паста": 0.5
+      }
+    }
   },
-  "date_produced": {
-    "from": "07.08.2000",
-    "to": "07.08.2022"
+  "price": {
+    "provider": "pyfloat",
+    "kwargs": {
+      "positive": true,
+      "left_digits": 5,
+      "right_digits": 2
+    }
   }
 }

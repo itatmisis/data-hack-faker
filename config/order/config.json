@@ -2,11 +2,18 @@
   "locale": "ru_RU",
   "rows": 10000,
   "first_name": {
-    "min_length": 5,
-    "max_length": 15
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Иван": 0.5,
+        "Андрей": 0.5
+      }
+    }
   },
-  "timestamp": {
-    "from": "01.01.1970,00:00:00",
-    "to": "07.08.2022,14:00:00"
+  "phone_number": {
+    "provider": "bothify",
+    "kwargs": {
+      "text": "8918#######"
+    }
   }
 }

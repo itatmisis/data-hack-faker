@@ -55,8 +55,8 @@ pre-commit = "*"
 #mkdocs-gen-files = "*"
 #mkdocs-literate-nav = "*"
 
-#[tool.poetry.scripts]
-#fact = "data_hack_faker.cli:app"
+[tool.poetry.scripts]
+data-hack-fake = "data_hack_faker.cli:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
