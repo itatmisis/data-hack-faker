@@ -12,6 +12,6 @@ class EmployeeFactory(BaseFactory):
 
     first_name = Faker("first_name")
     last_name = Faker("last_name")
-    age = Faker("pyint", min_value=settings['min'], max_value=settings['max'])
+    age = Faker("pyint", min_value=settings['age']['min'], max_value=settings['age']['max'])
     job = Faker("job")
     company_id = Faker("pyint", min_value=0, max_value=9999)

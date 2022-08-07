@@ -11,7 +11,7 @@ def check_customer(customer: Customer):
         assert isinstance(customer.last_name, str)
         assert settings['age']['min'] <= customer.age <= settings['age']['max']
         assert len(customer.phone_number) == 11
-        assert customer.phone_number[:4] == settings['phone_number']['mask'][:4]
+        assert customer.phone_number[:4] == settings['phone']['mask'][:4]
 
 
 def test_customer_factory():
