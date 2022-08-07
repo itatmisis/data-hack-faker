@@ -1,4 +1,4 @@
-from config import product_settings as settings
+from ..config import product_settings as settings
 import factory
 
 from . import BaseFactory
