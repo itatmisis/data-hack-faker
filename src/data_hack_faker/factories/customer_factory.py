@@ -1,7 +1,7 @@
-from config import customer_settings as settings
 import factory
 
 from . import BaseFactory
+from ..config_parser import customer_settings as settings
 from ..dataclasses import Customer
 
 locale = settings["locale"] or "en_US"

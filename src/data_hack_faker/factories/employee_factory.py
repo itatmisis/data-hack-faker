@@ -1,7 +1,7 @@
-from config import employee_settings as settings
 import factory
 
 from . import BaseFactory
+from ..config_parser import employee_settings as settings
 from ..dataclasses import Employee
 
 locale = settings["locale"] or "en_US"

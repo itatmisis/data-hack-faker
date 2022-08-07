@@ -1,7 +1,7 @@
-from config import product_settings as settings
 import factory
 
 from . import BaseFactory
+from ..config_parser import product_settings as settings
 from ..dataclasses import Product
 
 locale = settings["locale"] or "en_US"

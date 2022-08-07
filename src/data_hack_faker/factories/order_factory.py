@@ -1,7 +1,7 @@
-from config import order_settings as settings
 import factory
 
 from . import BaseFactory
+from ..config_parser import order_settings as settings
 from ..dataclasses import Order
 
 locale = settings["locale"] or "en_US"
