@@ -3,5 +3,5 @@ services:
   fake:
     build: .
     volumes:
-      - ./src/data_hack_faker/dataclasses:/app/dataclasses
-      - ./src/data_hack_faker/factories:/app/factories
+      - ./src/data_hack_faker/dataclasses:/app/src/data_hack_faker/dataclasses
+      - ./src/data_hack_faker/factories:/app/src/data_hack_faker/factories
