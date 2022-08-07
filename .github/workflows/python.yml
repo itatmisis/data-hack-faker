@@ -29,19 +29,15 @@ jobs:
         nox-session: [ "fmt_check", "lint", "type_check" ]
     steps:
       - uses: actions/checkout@v3
-      - name: Install poetry
-        run: pipx install poetry
-        with:
-          python-version: "3.10"
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
           # cache: poetry
+      - name: Install poetry
+        run: pipx install poetry
       - name: Install all dependencies, including Nox
         run: poetry install
-        with:
-          python-version: "3.10"
       - name: Test with Nox
         run: poetry run nox -s ${{ matrix.nox-session }}
         with:
