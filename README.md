@@ -4,10 +4,13 @@ DATA HACK FAKER
 ===============
 
 # Установка и запуск:  #
-`git clone https://github.com/itatmisis/data-hack-faker.git`
-`cd data-hack-faker/`
-`docker compose up`
-`docker compose run fake`
+```shell
+git clone https://github.com/itatmisis/data-hack-faker.git
+cd data-hack-faker/
+docker compose up
+docker compose run fake
+pytest
+```
 # Настройка дефолтных значений:  #
 В `data-hack-faker/config` лежит `.json` файл для каждой таблицы соответственно. Изменяя поля в файлах можно изменить диапозоны значений и задать частоту генерируемых значений
 ~~~ json
