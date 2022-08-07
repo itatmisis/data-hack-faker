@@ -10,7 +10,7 @@ def check_order(order: Order):
     with check:
         assert isinstance(order.product_id, int)
         assert isinstance(order.customer_id, int)
-        assert isinstance(order.created_at, datetime)
+        assert isinstance(order.date_produced, datetime)
 
 
 def test_order_factory():

@@ -17,7 +17,6 @@ python = "^3.9"
 pyspark = "^3.3.0"
 factory-boy = "^3.2.1"
 typer = "^0.6.1"
-pandas = "^1.4.3"
 ujson = "^5.4.0"
 
 [tool.poetry.dev-dependencies]
@@ -28,6 +27,7 @@ pytest = "*"
 pytest-cov = "*"
 pytest-check = "*"
 pytest-benchmark = "*"
+pyspark-test = "*"
 
 # Type Checking.
 mypy = "*"
