@@ -1,0 +1,19 @@
+{
+  "locale": "ru_RU",
+  "rows": 10000,
+  "first_name": {
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Иван": 0.5,
+        "Андрей": 0.5
+      }
+    }
+  },
+  "phone_number": {
+    "provider": "bothify",
+    "kwargs": {
+      "text": "8918#######"
+    }
+  }
+}
