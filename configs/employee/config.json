@@ -1,0 +1,22 @@
+{
+  "locale": "ru_RU",
+  "rows": 10000,
+  "first_name": {
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Алексей": 0.5,
+        "Геннадий": 0.5
+      }
+    }
+  },
+  "job": {
+    "provider": "random_element",
+    "kwargs": {
+      "elements": {
+        "Программист": 0.2,
+        "Сантехник": 0.8
+      }
+    }
+  }
+}
