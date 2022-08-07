@@ -10,7 +10,7 @@ from .base_dataclass import BaseDataclass
 class Order(BaseDataclass):
     customer_id: int
     product_id: int
-    created_at: datetime
+    date_produced: datetime
 
     @staticmethod
     def schema() -> StructType:
@@ -19,7 +19,7 @@ class Order(BaseDataclass):
                 StructField("id", IntegerType(), False),
                 StructField("customer_id", IntegerType(), False),
                 StructField("product_id", IntegerType(), False),
-                StructField("created_at", TimestampType(), False),
+                StructField("date_produced", TimestampType(), False),
             ]
         )
         return schema

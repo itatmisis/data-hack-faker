@@ -27,7 +27,7 @@ class Product(BaseDataclass):
                 StructField("id", IntegerType(), False),
                 StructField("name", StringType(), False),
                 StructField("price", DoubleType(), False),
-                StructField("created_at", TimestampType(), False),
+                StructField("date_produced", TimestampType(), False),
                 StructField("company_id", IntegerType(), False),
             ]
         )
